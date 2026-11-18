@@ -1,0 +1,1226 @@
+/* PAGE INDEX/
+
+
+/* [D] 1. VARIABLES ET COULEURS */
+
+
+:root {
+    --zitouna-green-dark: #263d22;
+    --zitouna-green: #3e5a1e;
+    --zitouna-green-light: #78934d;
+    --zitouna-green-pale: #e6edda;
+
+    --zitouna-gold: #d6b94a;
+    --zitouna-gold-light: #f2e3a3;
+
+    --zitouna-cream: #f8f6ef;
+    --zitouna-white: #ffffff;
+    --zitouna-text: #30372d;
+    --zitouna-muted: #6b7167;
+    --zitouna-border: #e2e5dc;
+
+    --font-main: Arial, Helvetica, sans-serif;
+
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 22px;
+
+    --shadow-card: 0 5px 18px rgba(38, 61, 34, 0.10);
+    --shadow-hover: 0 14px 28px rgba(38, 61, 34, 0.18);
+
+    --transition-normal: 0.3s ease;
+}
+
+
+
+/* [D] 2. STYLES GÉNÉRAUX */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    color: var(--zitouna-text);
+    background-color: var(--zitouna-cream);
+    line-height: 1.7;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--zitouna-green);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+a:hover {
+    color: var(--zitouna-green-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--zitouna-green-dark);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+::selection {
+    color: var(--zitouna-green-dark);
+    background-color: var(--zitouna-gold);
+}
+
+
+/* [D] 3. ACCESSIBILITÉ ET FOCUS CLAVIER */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--zitouna-gold);
+    outline-offset: 4px;
+}
+
+
+/* 4. NAVBAR */
+
+.navbar {
+    min-height: 78px;
+    padding: 14px 0;
+    background-color: var(--zitouna-green-dark) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    transition:
+        padding var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.navbar .container {
+    gap: 20px;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+    color: var(--zitouna-gold) !important;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.navbar-brand:hover {
+    color: #ffe56a !important;
+}
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.navbar .nav-link {
+    position: relative;
+    padding: 10px 12px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition:
+        color var(--transition-normal),
+        background-color var(--transition-normal);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active{
+    color: var(--zitouna-gold) !important;
+    
+}
+
+.navbar .nav-link::after {
+    position: absolute;
+    left: 12px;
+    bottom: 3px;
+    width: calc(100% - 24px);
+    height: 2px;
+    background-color: var(--zitouna-gold);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+.navbar .nav-link {
+    display: inline-block;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(242, 197, 0, 0.3);
+}
+
+
+/* 5. BANDEAU D'INFORMATION*/
+
+.alert-success {
+    color: var(--zitouna-green-dark);
+    background-color: #edf4e6;
+    border-color: #cbdcba;
+    border-radius: var(--radius-small);
+}
+
+.alert-success strong {
+    color: var(--zitouna-green);
+}
+
+.alert .btn-close {
+    box-shadow: none;
+}
+
+
+/*  6. HERO — PAGE D'ACCUEIL */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 560px;
+    min-height: 100svh;
+    padding: 100px 0;
+    overflow: hidden;
+    color: var(--zitouna-white);
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(20, 36, 18, 0.85) 0%,
+            rgba(20, 36, 18, 0.58) 55%,
+            rgba(20, 36, 18, 0.20) 100%
+        ),
+        url("../images/oliveraie.jpg");
+
+    background-color: var(--zitouna-green-dark);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    max-width: 850px;
+    margin-bottom: 25px;
+    color: var(--zitouna-white);
+    font-size: clamp(2.3rem, 5vw, 4.7rem);
+    font-weight: 800;
+    line-height: 1.15;
+
+    animation: hero-title 0.8s ease both;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+    animation: hero-text 0.8s ease 0.15s both;
+}
+
+.hero .btn {
+    margin: 5px 8px 5px 0;
+    padding: 13px 22px;
+    border-radius: var(--radius-small);
+    font-weight: 700;
+    transition:
+        transform var(--transition-normal),
+        background-color var(--transition-normal);
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero .btn-success {
+    color: var(--zitouna-white);
+    background-color: var(--zitouna-green);
+    border-color: var(--zitouna-green);
+}
+
+.hero .btn-success:hover {
+    background-color: var(--zitouna-green-light);
+    border-color: var(--zitouna-green-light);
+}
+
+.hero .btn-outline-light:hover {
+    color: var(--zitouna-green-dark);
+}
+
+/* Animation du titre */
+
+@keyframes hero-title {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation du texte */
+
+@keyframes hero-text {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Indicateur de défilement du hero */
+
+@keyframes scroll-indicator {
+    0% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(8px);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+}
+
+
+/* 7. CHIFFRES CLÉS */
+
+.chiffres {
+    background-color: var(--zitouna-cream);
+}
+
+.chiffres-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.chiffre {
+    flex: 1 1 190px;
+    max-width: 260px;
+    padding: 25px 15px;
+    text-align: center;
+    background-color: var(--zitouna-white);
+    border: 1px solid var(--zitouna-border);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-card);
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.chiffre:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.chiffre svg {
+    margin-bottom: 12px;
+    color: var(--zitouna-green);
+}
+
+.chiffre h2 {
+    margin-bottom: 5px;
+    color: var(--zitouna-green);
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+.chiffre p {
+    margin-bottom: 0;
+    color: var(--zitouna-muted);
+}
+
+
+/* 8. TITRES DE SECTIONS */
+
+.engagements h2,
+.produits h2,
+.galerie h2,
+.temoignages h2 {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.engagements h2::after,
+.produits h2::after,
+.galerie h2::after,
+.temoignages h2::after {
+    display: block;
+    width: 65px;
+    height: 3px;
+    margin: 15px auto 0;
+    background-color: var(--zitouna-gold);
+    border-radius: 5px;
+    content: "";
+}
+
+
+/*9. CARTES DES ENGAGEMENTS ET DES PRODUITS*/
+
+.engagements {
+    background-color: var(--zitouna-green-pale);
+}
+
+.produits {
+    background-color: var(--zitouna-cream);
+}
+
+.engagements .card,
+.produits .card {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--zitouna-white);
+    border: 1px solid var(--zitouna-border);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-card);
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.engagements .card:hover,
+.produits .card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--zitouna-green-light);
+}
+
+.engagements .card-body,
+.produits .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.engagements .card-body.text-center {
+    align-items: center;
+}
+
+.engagements .card-title,
+.produits .card-title {
+    margin-bottom: 15px;
+    color: var(--zitouna-green);
+    font-size: 1.25rem;
+}
+
+.engagements .card-text,
+.produits .card-text {
+    color: var(--zitouna-muted);
+}
+
+.produits .card .btn {
+    margin-top: auto;
+    border-radius: var(--radius-small);
+    font-weight: 600;
+}
+
+.produits .btn-success {
+    background-color: var(--zitouna-green);
+    border-color: var(--zitouna-green);
+}
+
+.produits .btn-success:hover {
+    background-color: var(--zitouna-green-light);
+    border-color: var(--zitouna-green-light);
+}
+
+/* 10. GALERIE */
+
+.galerie {
+    background-color: var(--zitouna-white);
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, 180px);
+    gap: 15px;
+}
+
+.galerie-item-1 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.galerie-item-2 {
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+
+.galerie-item-3 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.galerie-item-4 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.galerie-item figure {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--zitouna-cream);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-card);
+}
+
+.galerie-item img {
+    width: 100%;
+    height: calc(100% - 52px);
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.galerie-item figure:hover img {
+    transform: scale(1.04);
+}
+
+.galerie-item figcaption {
+    padding: 15px;
+    color: var(--zitouna-green-dark);
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--zitouna-white);
+}
+
+
+/* 11. TÉMOIGNAGES*/
+
+.temoignages {
+    background-color: var(--zitouna-cream);
+}
+
+.temoignage {
+    height: 100%;
+    margin: 0;
+    padding: 25px;
+    background-color: var(--zitouna-white);
+    border-left: 4px solid var(--zitouna-gold);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-card);
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.temoignage:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.temoignage p {
+    color: var(--zitouna-text);
+    font-style: italic;
+}
+
+.temoignage cite {
+    color: var(--zitouna-green);
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* 12. APPEL À L'ACTION */
+
+.cta {
+    position: relative;
+    padding: 75px 0 !important;
+    background:
+        linear-gradient(
+            rgba(38, 61, 34, 0.94),
+            rgba(38, 61, 34, 0.94)
+        );
+}
+
+.cta h2 {
+    color: var(--zitouna-white);
+}
+
+.cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta .btn-light {
+    padding: 12px 25px;
+    color: var(--zitouna-green-dark);
+    border-radius: var(--radius-small);
+    font-weight: 700;
+    transition:
+        transform var(--transition-normal),
+        background-color var(--transition-normal);
+}
+
+.cta .btn-light:hover {
+    background-color: var(--zitouna-gold);
+    transform: translateY(-3px);
+}
+
+
+/*13. FOOTER — 4 COLONNES */
+
+.footer {
+    padding: 55px 0 20px;
+    color: rgba(255, 255, 255, 0.85);
+    background-color: var(--zitouna-green-dark);
+}
+
+.footer .container {
+    max-width: 1200px;
+}
+
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5 {
+    margin-bottom: 18px;
+    color: var(--zitouna-gold);
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer a:hover {
+    color: var(--zitouna-gold);
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 8px;
+}
+
+.footer hr {
+    margin: 30px 0 20px;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.footer .text-center {
+    font-size: 0.9rem;
+}
+
+
+/*  17. ANIMATIONS ET MOUVEMENTS */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* 18. MODE IMPRESSION */
+
+@media print {
+
+    .navbar,
+    .footer,
+    #retourHaut,
+    .alert,
+    .btn,
+    .cta {
+        display: none !important;
+    }
+
+    body {
+        color: #000000;
+        background: #ffffff;
+        font-size: 12pt;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: #000000;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    .card,
+    .temoignage {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+        break-inside: avoid;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+}
+
+/*  PAGE HISTOIRE — ZITOUNA */
+
+.page-histoire {
+    background-color: #faf8f0;
+    color: #283b20;
+}
+
+/* TITRES */
+
+.page-histoire h1,
+.page-histoire h2 {
+    color: #3e5a1e;
+    font-weight: 700;
+}
+
+.page-histoire h1 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+}
+
+.page-histoire h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.page-histoire h3 {
+    color: #3e5a1e;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* INTRODUCTION : DEUX COLONNES */
+
+.page-histoire .introduction-texte {
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 1px solid #d9dfcd;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.page-histoire .introduction-texte p:first-child::first-letter {
+    float: left;
+    color: #a78638;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+    padding-right: 8px;
+}
+
+.page-histoire .introduction-texte p:nth-child(2)::first-letter {
+    float: left;
+    color: #a78638;
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+    padding-right: 8px;
+}
+
+.page-histoire .introduction-texte p:first-child::first-line {
+    font-variant: small-caps;
+}
+
+/* FRISE CHRONOLOGIQUE */
+
+.page-histoire .frise-histoire {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.page-histoire .frise-chronologique {
+    position: relative;
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Ligne centrale */
+
+.page-histoire .frise-chronologique::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background-color: #a78638;
+    transform: translateX(-50%);
+}
+
+/* Éléments de la frise */
+
+.page-histoire .frise-chronologique li {
+    position: relative;
+    width: 50%;
+    padding: 20px 35px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e5d9;
+    box-shadow: 0 4px 12px rgba(40, 59, 32, 0.08);
+}
+
+/* Éléments à gauche */
+
+.page-histoire .frise-chronologique li:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+/* Éléments à droite */
+
+.page-histoire .frise-chronologique li:nth-child(even) {
+    left: 50%;
+}
+
+/* Dates */
+
+.page-histoire .frise-chronologique time {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 7px 16px;
+    color: #ffffff;
+    background-color: #3e5a1e;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* POINTS SUR LA LIGNE */
+
+.page-histoire .frise-chronologique li::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    background-color: #a78638;
+    border: 3px solid #faf8f0;
+    border-radius: 50%;
+}
+
+.page-histoire .frise-chronologique li:nth-child(even)::before {
+    right: auto;
+    left: -10px;
+}
+
+/* ANIMATION DE LA FRISE */
+
+.page-histoire .frise-chronologique li {
+    animation: apparition-histoire 0.8s ease both;
+}
+
+.page-histoire .frise-chronologique li:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.page-histoire .frise-chronologique li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.page-histoire .frise-chronologique li:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.page-histoire .frise-chronologique li:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.page-histoire .frise-chronologique li:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+@keyframes apparition-histoire {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FONDATEUR */
+
+.page-histoire .fondateur-histoire {
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.page-histoire .portrait-fondateur {
+    float: left;
+    width: 260px;
+    margin: 0 25px 15px 0;
+}
+
+.page-histoire .portrait-fondateur img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #e5dfc9;
+}
+
+.page-histoire .fondateur-histoire::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* GRAPHIQUE DE PRODUCTION */
+
+.page-histoire .production-histoire img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #61791a;
+    border-radius: 10px;
+}
+
+/* LABELS ET CERTIFICATIONS */
+
+.page-histoire .certifications-histoire {
+    text-align: center;
+}
+
+.page-histoire .logo-certification {
+    display: block;
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.page-histoire .logo-certification:hover {
+    transform: scale(1.08);
+}
+/* FOOTER */
+
+.page-histoire footer {
+    background-color: #283b20;
+    color: #ffffff;
+}
+
+/* RESPONSIVE : TABLETTE ET MOBILE */
+
+@media (max-width: 767.98px) {
+
+    .page-histoire h1 {
+        font-size: 2rem;
+    }
+
+    .page-histoire h2 {
+        font-size: 1.6rem;
+    }
+
+    .page-histoire .introduction-texte {
+        column-count: 1;
+        column-gap: 0;
+        column-rule: none;
+    }
+
+    .page-histoire .frise-chronologique {
+        padding-left: 30px;
+    }
+
+    .page-histoire .frise-chronologique::before {
+        left: 8px;
+    }
+
+    .page-histoire .frise-chronologique li,
+    .page-histoire .frise-chronologique li:nth-child(odd),
+    .page-histoire .frise-chronologique li:nth-child(even) {
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .page-histoire .frise-chronologique li::before,
+    .page-histoire .frise-chronologique li:nth-child(even)::before {
+        right: auto;
+        left: -30px;
+    }
+
+    .page-histoire .portrait-fondateur {
+        float: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+
+    .page-histoire .production-histoire canvas {
+        height: 280px;
+    }
+}
+
+/* RESPECT DU RÉGLAGE DE MOUVEMENT RÉDUIT */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-histoire .frise-chronologique li {
+        animation: none;
+    }
+
+    .page-histoire .logo-certification {
+        transition: none;
+    }
+}
+/* Images des produits */
+#galerie-produits .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+#galerie-produits .card {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Tableau comparatif */
+
+.table-responsive table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dce5d3;
+}
+
+.table-responsive table thead th {
+    background-color: #3E5A1E;
+    color: white;
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.table-responsive table tbody th,
+.table-responsive table tbody td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.table-responsive table tbody tr:hover > * {
+    background-color: #edf3e5;
+}
+
+.table-responsive table tfoot td {
+    background-color: #f3f7ee;
+    color: #3E5A1E;
+    font-weight: bold;
+    padding: 15px;
+}
+#produits .row {
+    width: 100%;
+}
+
+#produits .card {
+    width: 100%;
+    min-width: 0;
+}
+
+#produits .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#produits .card-body {
+    padding: 15px;
+}
+
+#produits .card-title {
+    font-size: 18px;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+/*page visites*/
+
+.faq-item {
+    border: 4px solid #dce5d3;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 15px;
+}
+
+.faq-item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-chevron {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+}
+
+.faq-item p {
+    margin-top: 15px;
+}
+/* Ruban de l'offre mise en avant */
+.ruban-offre {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    width: 140px;
+    background-color: #A8B878;
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    padding: 5px;
+}
+.ratio iframe {
+    border: 1px solid #dce5d3;
+    border-radius: 10px;
+}
+
+/* Horaires */
+/* PAGE CONTACT */
+
+.page-contact address {
+    padding: 20px;
+    background-color: var(--zitouna-cream);
+    border-radius: var(--radius-small);
+    font-style: normal;
+}
+
+.page-contact address a {
+    color: var(--zitouna-green);
+}
+
+.page-contact .horaires {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--zitouna-cream);
+    border-radius: var(--radius-small);
+}
+
+.page-contact .horaires dt {
+    font-weight: bold;
+    color: var(--zitouna-green);
+}
+
+.page-contact .horaires dd {
+    margin: 0;
+}
+.horaires dt {
+    font-weight: bold;
+    color: #3E5A1E;
+}
+
+.horaires dd {
+    margin: 0;
+}

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Notre visites & Ateliers — Coopérative Zitouna</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <nav
+                class="navbar navbar-expand-lg navbar-dark bg-success sticky-top"
+            >
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img
+                            src="assets/images/logo.png"
+                            alt="Logo Zitouna"
+                        />Zitouna</a
+                    >
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarVisites"
+                        aria-controls="navbarVisites"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarVisites">
+                        <ul class="navbar-nav ms-auto align-items-lg-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html"
+                                    >Accueil</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="histoire.html"
+                                    >Notre histoire</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="produits.html"
+                                    >Nos produits</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="visites.html"
+                                    >Visites & ateliers</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Offres de visites -->
+        <section class="container my-5">
+            <h1 class="text-center mb-4">Visites & Ateliers</h1>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Offre 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <div class="card-body">
+                            <h3 class="card-title">Visite du moulin</h3>
+
+                            <p class="card-text">
+                                Découvrez les étapes de fabrication de notre
+                                huile d'olive et le fonctionnement de notre
+                                moulin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offre 2 -->
+                <div class="col-md-4">
+                    <div
+                        class="card h-100 d-flex flex-column position-relative overflow-hidden"
+                    >
+                        <span class="ruban-offre">Populaire</span>
+
+                        <div class="card-body">
+                            <h3 class="card-title">Atelier dégustation</h3>
+
+                            <p class="card-text">
+                                Apprenez à découvrir les arômes et les saveurs
+                                de nos huiles d'olive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offre 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 d-flex flex-column">
+                        <div class="card-body">
+                            <h3 class="card-title">Séjour récolte</h3>
+
+                            <p class="card-text">
+                                Participez à une expérience autour de la récolte
+                                des olives et de la vie agricole.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vidéo de présentation -->
+        <section class="container py-5">
+            <h2 class="text-center mb-4">
+                Découvrez la fabrication de notre huile d'olive
+            </h2>
+
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube-nocookie.com/embed/QBmIpb91P0c" title="Fabrication de l'huile d'olive" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Ambiance sonore -->
+        <section class="ambiance-sonore container my-5">
+            <h2>Ambiance sonore</h2>
+
+            <p>
+                Découvrez l'ambiance authentique de notre moulin à travers le
+                bruit de la production d'huile d'olive.
+            </p>
+
+            <audio controls>
+                <source src="assets/audio/molin.mp3" type="audio/mpeg" />
+                <source src="assets/audio/molin.ogg" type="audio/ogg" />
+
+                Votre navigateur ne supporte pas la lecture audio.
+            </audio>
+        </section>
+
+        <!-- Agenda des événements -->
+
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Agenda des événements</h2>
+
+            <div class="row g-4">
+                <!-- Événement 1 -->
+                <div class="col-md-6">
+                    <article class="h-event card h-100">
+                        <div class="card-body">
+                            <h3 class="p-name">Visite guidée du moulin</h3>
+                            <p>
+                                Date :
+                                <time class="dt-start" datetime="2026-12-05">
+                                    05 décembre 2026
+                                </time>
+                            </p>
+                            <p class="p-location">Notre moulin - Tunisie</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Événement 2 -->
+                <div class="col-md-6">
+                    <article class="h-event card h-100">
+                        <div class="card-body">
+                            <h3 class="p-name">Atelier de dégustation</h3>
+                            <p>
+                                Date :
+                                <time class="dt-start" datetime="2026-12-12">
+                                    12 décembre 2026
+                                </time>
+                            </p>
+                            <p class="p-location">
+                                Espace de dégustation - Tunisie
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Événement 3 -->
+                <div class="col-md-6">
+                    <article class="h-event card h-100">
+                        <div class="card-body">
+                            <h3 class="p-name">
+                                Découverte de la récolte des olives
+                            </h3>
+                            <p>
+                                Date :
+                                <time class="dt-start" datetime="2026-12-19">
+                                    19 décembre 2026
+                                </time>
+                            </p>
+                            <p class="p-location">Oliveraie - Tunisie</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Événement 4 -->
+                <div class="col-md-6">
+                    <article class="h-event card h-100">
+                        <div class="card-body">
+                            <h3 class="p-name">
+                                Atelier sur la production d'huile
+                            </h3>
+                            <p>
+                                Date :
+                                <time class="dt-start" datetime="2027-01-09">
+                                    09 janvier 2027
+                                </time>
+                            </p>
+                            <p class="p-location">Notre moulin - Tunisie</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Événement 5 -->
+                <div class="col-md-6">
+                    <article class="h-event card h-100">
+                        <div class="card-body">
+                            <h3 class="p-name">
+                                Journée découverte de la coopérative
+                            </h3>
+                            <p>
+                                Date :
+                                <time class="dt-start" datetime="2027-01-16">
+                                    16 janvier 2027
+                                </time>
+                            </p>
+                            <p class="p-location">
+                                Coopérative Zitouna - Tunisie
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Questions fréquentes</h2>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>
+                        Comment réserver une visite ?
+                        <span class="faq-chevron">⌄</span>
+                    </summary>
+                    <p>
+                        Vous pouvez nous contacter pour organiser votre visite.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        Peut-on participer à la récolte des olives ?
+                        <span class="faq-chevron">⌄</span>
+                    </summary>
+                    <p>
+                        Oui, le séjour récolte permet de découvrir les activités
+                        de récolte.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        La dégustation est-elle accessible aux débutants ?
+                        <span class="faq-chevron">⌄</span>
+                    </summary>
+                    <p>
+                        Oui, l'atelier permet de découvrir les arômes et les
+                        saveurs de l'huile d'olive.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        Combien de temps dure la visite du moulin ?
+                        <span class="faq-chevron">⌄</span>
+                    </summary>
+                    <p>La durée peut être précisée lors de la réservation.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Carte d'accès -->
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Comment nous trouver ?</h2>
+
+            <div class="ratio ratio-16x9">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=10.15%2C36.75%2C10.25%2C36.85&layer=mapnik"
+                    title="Carte d'accès à la coopérative Zitouna"
+                    loading="lazy"
+                >
+                </iframe>
+            </div>
+
+            <p class="text-center mt-3">
+                <a href="https://www.openstreetmap.org/" target="_blank">
+                    Voir la carte sur OpenStreetMap
+                </a>
+            </p>
+        </section>
+        <footer class="footer text-white py-4">
+            <div class="container">
+                <p class="mb-0 text-center">
+                    &copy; 2026 Zitouna — Coopérative oléicole
+                </p>
+            </div>
+        </footer>
+        <!-- Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

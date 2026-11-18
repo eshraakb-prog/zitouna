@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos huiles d'olive — Zitouna</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Logo Zitouna">
+                    Zitouna
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVisites"
+                        aria-controls="navbarVisites" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarVisites">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="histoire.html">Notre histoire</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="produits.html">Nos produits</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="visites.html">Visites & ateliers</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container my-5" id="produits">
+
+            <h1 class="text-center mb-4">Nos huiles d'olive</h1>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+
+                <button class="btn btn-success active"
+                        data-filter="all"
+                        aria-pressed="true">
+                    Toutes
+                </button>
+
+                <button class="btn btn-outline-success"
+                        data-filter="fruite-vert"
+                        aria-pressed="false">
+                    Fruité vert
+                </button>
+
+                <button class="btn btn-outline-success"
+                        data-filter="fruite-mur"
+                        aria-pressed="false">
+                    Fruité mûr
+                </button>
+
+                <button class="btn btn-outline-success"
+                        data-filter="aromatisees"
+                        aria-pressed="false">
+                    Aromatisées
+                </button>
+
+                <button class="btn btn-outline-success"
+                        data-filter="bio"
+                        aria-pressed="false">
+                    Bio
+                </button>
+
+            </div>
+
+        
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"
+            id="galerie-produits">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+                    <!-- Produit 1 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit1.jfif"
+                                class="card-img-top"
+                                alt="Huile d'olive fruité vert bio">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile Fruité Vert Bio</h5>
+
+                                <p class="card-text">Volume : 500 ml</p>
+
+                                <span class="badge text-bg-success">Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">
+                                        Détails
+                                    </button>
+
+                                    <button class="btn btn-outline-success btn-sm">
+                                        Ajouter au devis
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Produit 2 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit2.jfif" class="card-img-top" alt="Huile d'olive fruité vert">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile Fruité Vert</h5>
+
+                                <p class="card-text">Volume : 1 L</p>
+
+                                <span class="badge text-bg-warning">Non Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">Détails</button>
+                                    <button class="btn btn-outline-success btn-sm">Ajouter au devis</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 3 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit3.jpg" class="card-img-top" alt="Huile d'olive fruité mûr">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile Fruité Mûr</h5>
+
+                                <p class="card-text">Volume : 500 ml</p>
+
+                                <span class="badge text-bg-warning">Non Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">
+                                        Détails
+                                    </button>
+
+                                    <button class="btn btn-outline-success btn-sm">
+                                        Ajouter au devis
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 4 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit4.jpg"
+                                class="card-img-top"
+                                alt="Huile aromatisée">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile Aromatisée</h5>
+
+                                <p class="card-text">Volume : 250 ml</p>
+                                
+                                <span class="badge text-bg-warning">Non Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">
+                                        Détails
+                                    </button>
+
+                                    <button class="btn btn-outline-success btn-sm">
+                                        Ajouter au devis
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 5 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit5.jpg"
+                                class="card-img-top"
+                                alt="Huile fruité vert premium">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile Fruité Vert Premium</h5>
+
+                                <p class="card-text">Volume : 750 ml</p>
+
+                                <span class="badge text-bg-warning">Non Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">
+                                        Détails
+                                    </button>
+
+                                    <button class="btn btn-outline-success btn-sm">
+                                        Ajouter au devis
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 6 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit6.jpg"
+                                class="card-img-top"
+                                alt="Huile fruité mûr bio">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile Fruité Mûr Bio</h5>
+
+                                <p class="card-text">Volume : 1 L</p>
+
+                                <span class="badge text-bg-success">Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">
+                                        Détails
+                                    </button>
+
+                                    <button class="btn btn-outline-success btn-sm">
+                                        Ajouter au devis
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 7 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit7.jpg"
+                                class="card-img-top"
+                                alt="Huile au romarin">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile au Romarin</h5>
+
+                                <p class="card-text">Volume : 250 ml</p>
+
+                                <span class="badge text-bg-warning">Non Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">
+                                        Détails
+                                    </button>
+
+                                    <button class="btn btn-outline-success btn-sm">
+                                        Ajouter au devis
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produit 8 -->
+                    <div class="col">
+                        <div class="card h-100">
+
+                            <img src="assets/images/produit8.jpg"
+                                class="card-img-top"
+                                alt="Huile d'olive bio">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">Huile d'Olive Bio</h5>
+
+                                <p class="card-text">Volume : 500 ml</p>
+
+                                <span class="badge text-bg-success">Bio</span>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-success btn-sm">
+                                        Détails
+                                    </button>
+
+                                    <button class="btn btn-outline-success btn-sm">
+                                        Ajouter au devis
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="container my-5">
+
+            <h2 class="text-center mb-4">Comparer nos huiles</h2>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-striped text-center align-middle">
+
+                    <caption class="caption-top">Tableau comparatif des caractéristiques de nos huiles d'olive.</caption>
+
+                    <thead class="table-success">
+
+                        <tr>
+                            <th rowspan="2" scope="col">Catégorie</th>
+                            <th rowspan="2" scope="col">Produit</th>
+                            <th colspan="3" scope="colgroup">
+                                Caractéristiques chimiques
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th scope="col">Acidité (%)</th>
+                            <th scope="col">Peroxydes</th>
+                            <th scope="col">Polyphénols</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <th rowspan="3" scope="rowgroup">Fruité vert</th>
+                            <th scope="row">Fruité Vert Bio</th>
+                            <td>≤ 0,8</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Fruité Vert</th>
+                            <td>≤ 0,8</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Fruité Vert Premium</th>
+                            <td>≤ 0,8</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="2" scope="rowgroup">Fruité mûr</th>
+                            <th scope="row">Fruité Mûr</th>
+                            <td>≤ 0,8</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Fruité Mûr Bio</th>
+                            <td>≤ 0,8</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="2" scope="rowgroup">Aromatisées</th>
+                            <th scope="row">Huile Aromatisée</th>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Huile au Romarin</th>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="rowgroup">Bio</th>
+                            <th scope="row">Huile d'Olive Bio</th>
+                            <td>≤ 0,8</td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot class="table-light">
+                        <tr>
+                            <td colspan="5">
+                                Norme : l'acidité de l'huile d'olive extra vierge
+                                ne dépasse pas 0,8 %.
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="footer text-white py-4">
+        <div class="container">
+            <p class="mb-0 text-center">
+                &copy; 2026 Zitouna — Coopérative oléicole
+            </p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
